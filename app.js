@@ -6,17 +6,12 @@ const folderRouter = require("./routes/folder.route");
 const formRouter = require("./routes/form.route");
 const formDataRouter = require("./routes/formdata.route");
 
-app.get("/hello", (req, res) => {
-	res.json({
-		message: "Hello",
-	});
-});
-
 app.use(
 	cors({
-		origin: "", // Allows all origins
+		origin: ["https://formbot-fe.vercel.app", "http://localhost:5173"], // Specify allowed origins
 		methods: "GET,POST,PUT,DELETE,OPTIONS", // Adjust methods as needed
 		allowedHeaders: "Content-Type,Authorization", // Adjust headers as needed
+		credentials: true, // Allow credentials if needed
 	})
 );
 app.use(express.json());
