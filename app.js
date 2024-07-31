@@ -14,7 +14,7 @@ app.get("/hello", (req, res) => {
 
 app.use(
 	cors({
-		origin: "*", // Allows all origins
+		origin: "", // Allows all origins
 		methods: "GET,POST,PUT,DELETE,OPTIONS", // Adjust methods as needed
 		allowedHeaders: "Content-Type,Authorization", // Adjust headers as needed
 	})
